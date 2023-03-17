@@ -1,5 +1,5 @@
 const PORT = process.env.PORT || 5000;
-const Application = require('./framework/Application');
+const Application = require('./framework/application');
 const jsonParser = require('./framework/parseJson');
 const parseUrl = require('./framework/parseUrl');
 

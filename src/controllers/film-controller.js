@@ -37,35 +37,35 @@ class FilmController {
     async getFilms(req, res) {
         let sql = `SELECT * FROM Film`;
         const films = await db.query(sql);
-        res.json(films.rows);
+        res.send(films.rows);
     }
 
     async getOneFilm(req, res) {
         const id = req.params.id;
         let sql = `SELECT * FROM Film WHERE id = ${id}`;
         const films = await db.query(sql);
-        res.json(films.rows);
+        res.send(films.rows);
     }
 
     async createFilm(req, res) {
         const {name, prod_year} = req.body;
         let sql = `INSERT INTO Film (name, prod_year) VALUES (${name}, ${prod_year})`;
         const film = await db.query(sql);
-        res.json(film);
+        res.send(film);
     }
 
     async updateFilm(req, res) {
         const {id, name, prod_year} = req.body;
         let sql = `UPDATE Film SET name=${name}, prod_year=${prod_year} WHERE id = ${id}`;
         const film = await db.query(sql);
-        res.json(film);
+        res.send(film);
     }
 
     async deleteFilm(req, res) {
         const {id} = req.body;
         let sql = `DELETE FOM Film WHERE id = ${id}`;
         const film = await db.query(sql);
-        res.json(film);
+        res.send(film);
     }
 }
 
