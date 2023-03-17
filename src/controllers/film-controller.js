@@ -32,7 +32,6 @@
 */
 const db = require('../db');
 
-
 class FilmController {
     async getFilms(req, res) {
         let sql = `SELECT * FROM Film`;

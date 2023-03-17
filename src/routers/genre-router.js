@@ -10,4 +10,5 @@ router.get('/genres', genreController.getGenre);
 router.get('/genres/:id', genreController.getOneGenre);
 
 
+
 module.exports = router

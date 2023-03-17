@@ -1,6 +1,5 @@
 const db = require('../db');
 
-
 class GenreController {
     async getGenre(req, res) {
         let sql = `SELECT * FROM Genre`;
